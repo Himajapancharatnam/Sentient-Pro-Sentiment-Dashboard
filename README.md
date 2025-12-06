@@ -1,105 +1,146 @@
-# Sentient | Professional Sentiment Analysis Dashboard
+Sentient – Professional Sentiment Analysis Dashboard
+<p align="center"> <img src="https://img.shields.io/github/languages/top/Himajapancharatnam/Sentient-Pro-Sentiment-Dashboard?style=for-the-badge" /> <img src="https://img.shields.io/github/license/Himajapancharatnam/Sentient-Pro-Sentiment-Dashboard?style=for-the-badge" /> <img src="https://img.shields.io/github/stars/Himajapancharatnam/Sentient-Pro-Sentiment-Dashboard?style=for-the-badge" /> <img src="https://img.shields.io/github/forks/Himajapancharatnam/Sentient-Pro-Sentiment-Dashboard?style=for-the-badge" /> </p>
+📌 Overview
 
-![Status](https://img.shields.io/badge/Status-Active-success)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue)
-![License](https://img.shields.io/badge/License-MIT-purple)
+Sentient is a portfolio-grade AI Sentiment Analysis Dashboard engineered with modern frontend architecture and advanced NLP simulation.
 
-**Sentient** is a portfolio-grade AI application designed to demonstrate advanced Natural Language Processing (NLP) capabilities wrapped in a modern, high-performance user interface. It leverages **Google's Gemini 2.5 Flash** model to simulate traditional Python NLP architectures (VADER and TextBlob) while providing the semantic depth of Large Language Models.
+The system uses Google Gemini 2.5 Flash to simulate traditional sentiment engines (VADER & TextBlob) through prompt engineering and strict JSON output enforcement, ensuring predictable, type-safe AI behavior inside a real-time UI.
 
----
+This is not a demo app.
+This is AI Engineering in production style.
 
-## 🚀 Core Features
+🚀 Features
+✅ Dual-Model Sentiment Engine
 
-### 1. Dual-Model Inference Engine
-Unlike standard dashboards that rely on a single metric, Sentient performs a multi-dimensional analysis:
-- **VADER Simulation (Valence Aware Dictionary and sEntiment Reasoner):** Calculates a compound score (-1.0 to 1.0) focusing on polarity intensity.
-- **TextBlob Simulation:** Evaluates linguistic polarity and subjectivity to determine if text is factual or opinionated.
+Simulates two industry-standard approaches in parallel:
 
-### 2. Batch Dataset Processing
-- **CSV Ingestion:** Users can upload large datasets (e.g., product reviews, social media comments).
-- **Automated Sampling:** The system intelligently samples and aggregates data to provide instant distribution insights without server overload.
+VADER Simulation – Polarity intensity score (-1.0 to +1.0)
 
-### 3. Interactive Data Visualization
-- **Real-time Gauges:** Custom SVG D3-style gauges for immediate sentiment feedback.
-- **Dynamic Word Clouds:** Semantic extraction of key nouns and phrases, visualized by frequency and importance.
-- **Distribution Charts:** Interactive Pie and Bar charts using `Recharts` for dataset analytics.
+TextBlob Simulation – Polarity & subjectivity classification
 
----
+✅ CSV Batch Processing
 
-## 🛠️ Technical Stack
+Upload and analyze datasets instantly:
 
-### Frontend Architecture
-- **Framework:** React 18 (Functional Components, Hooks)
-- **Language:** TypeScript (Strict Mode)
-- **Styling:** Tailwind CSS (Utility-first, Responsive Design)
-- **Icons:** Lucide React
+Bulk sentiment scoring
 
-### AI & Data Layer
-- **Model:** Google Gemini 2.5 Flash (`gemini-2.5-flash`) via `@google/genai`
-- **Output Handling:** Structured JSON Enforcing (Schema Validation)
-- **Visualization Library:** Recharts & Custom SVG Components
+Automatic sampling
 
----
+Distribution analytics
 
-## 📂 Project Structure
+Polarity trends
 
-```bash
-├── components/          # Reusable UI components
-│   ├── Gauge.tsx        # D3-style sentiment gauge
-│   └── WordCloud.tsx    # Keyword visualization engine
-├── services/            # API integration layer
-│   └── gemini.ts        # Google Gemini AI configuration & prompts
-├── views/               # Page-level components
-│   ├── Analyzer.tsx     # Single-text analysis logic
-│   ├── DataVisuals.tsx  # Batch CSV processing logic
-│   └── Home.tsx         # Landing page
-├── App.tsx              # Main routing and layout controller
-├── types.ts             # TypeScript interfaces and shared types
-└── index.tsx            # Application entry point
-```
+✅ Interactive Data Visualizations
 
----
+📊 Sentiment gauge (SVG driven)
 
-## ⚡ Getting Started
+☁ Dynamic word clouds
 
-### Prerequisites
-- Node.js v16+
-- Google Cloud API Key with Gemini API access.
+📈 Bar charts
 
-### Installation
+🥧 Pie charts
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/sentient-dashboard.git
-   cd sentient-dashboard
-   ```
+⚡ Real-time updates
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+⚙️ Tech Stack
+Frontend
 
-3. **Configure Environment**
-   Create a `.env` file in the root directory:
-   ```env
-   API_KEY=your_google_gemini_api_key
-   ```
+React 18 (Hooks, Functional Design)
 
-4. **Run Development Server**
-   ```bash
-   npm start
-   ```
+TypeScript (Strict Mode)
 
----
+Tailwind CSS
 
-## 🧠 Design Philosophy
+Lucide Icons
 
-This project was built to showcase **"AI Engineering"**—the practice of engineering prompts and schemas to force LLMs to behave like deterministic software functions.
+Recharts
 
-By defining strict `JSON Schemas` in the `gemini.ts` service, we ensure the AI returns type-safe data that can be immediately consumed by the frontend visualization components, eliminating the need for complex intermediate parsing logic.
+AI Layer
 
----
+Google Gemini 2.5 Flash
 
-## 📄 License
+@google/genai SDK
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Structured JSON Schemas
+
+Deterministic Prompt Design
+
+📁 Project Structure
+src/
+├── components/
+│   ├── Gauge.tsx
+│   └── WordCloud.tsx
+├── services/
+│   └── gemini.ts
+├── views/
+│   ├── Home.tsx
+│   ├── Analyzer.tsx
+│   └── DataVisuals.tsx
+├── App.tsx
+├── types.ts
+└── index.tsx
+
+🧩 Installation & Setup
+Prerequisites
+
+Node.js v16+
+
+Google Gemini API Key
+
+Clone Repository
+git clone https://github.com/Himajapancharatnam/Sentient-Pro-Sentiment-Dashboard.git
+cd Sentient-Pro-Sentiment-Dashboard
+
+Install Dependencies
+npm install
+
+Configure API Key
+
+Create .env file:
+
+API_KEY=your_google_gemini_api_key
+
+Run Development Server
+npm start
+
+🧠 Engineering Philosophy
+
+Sentient was built to showcase:
+
+✅ Prompt Engineering
+✅ Schema Enforcement
+✅ Type-safe Output
+✅ UI-AI Isolation
+✅ LLM as deterministic function
+✅ Production-style architecture
+
+This system forces AI to behave like software — not conversation.
+
+🎯 Use Cases
+
+Brand reputation monitoring
+
+Product feedback analytics
+
+Social media analysis
+
+AI portfolio showcase
+
+Real-world NLP visualization
+
+📸 Screenshots (Add soon)
+![Dashboard Preview](./screenshots/dashboard.png)
+
+
+(Add screenshots to improve recruiter impact.)
+
+📜 License
+
+MIT License
+
+👤 Author
+
+Himaja Pancharatnam
+GitHub: https://github.com/Himajapancharatnam
+
+Role: AI Engineer | Frontend Developer | Full-Stack Developer
